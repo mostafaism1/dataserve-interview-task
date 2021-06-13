@@ -19,6 +19,7 @@ import javax.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import mostafaism.com.github.dataserveinterviewtask.validator.PhoneNumber;
 
 @Entity
 @Table(name = "student")
@@ -48,6 +49,7 @@ public class Student {
     @Column(name = "email", unique = true)
     private String email;
 
+    @PhoneNumber
     @Column(name = "phone")
     private String phone;
 

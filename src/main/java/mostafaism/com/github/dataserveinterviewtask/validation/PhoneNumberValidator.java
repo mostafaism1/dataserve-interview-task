@@ -1,4 +1,4 @@
-package mostafaism.com.github.dataserveinterviewtask.validator;
+package mostafaism.com.github.dataserveinterviewtask.validation;
 
 import java.util.regex.Pattern;
 

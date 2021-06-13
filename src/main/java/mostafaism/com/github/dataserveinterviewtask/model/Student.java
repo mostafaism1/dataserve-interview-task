@@ -19,7 +19,7 @@ import javax.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
-import mostafaism.com.github.dataserveinterviewtask.validator.PhoneNumber;
+import mostafaism.com.github.dataserveinterviewtask.validation.PhoneNumber;
 
 @Entity
 @Table(name = "student")

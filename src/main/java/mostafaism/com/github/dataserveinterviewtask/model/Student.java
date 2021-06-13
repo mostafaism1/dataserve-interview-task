@@ -18,11 +18,13 @@ import javax.validation.constraints.Pattern;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import mostafaism.com.github.dataserveinterviewtask.validation.PhoneNumber;
 
 @Entity
 @Table(name = "student")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

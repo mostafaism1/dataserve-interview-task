@@ -50,19 +50,13 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public void registerCourse(RegisterCourseRequest registerCourseRequest) {
-        final Long studentId = registerCourseRequest.getStudentId();
-        final Long courseId = registerCourseRequest.getCourseId();
-        Student student = studentRepository.findById(studentId)
-                .orElseThrow(() -> new InvalidArgumentException("Could not find student with id = " + studentId));
-        Course course = courseRepository.findById(courseId)
-                .orElseThrow(() -> new InvalidArgumentException("Could not find course with id = " + courseId));
-        List<Course> courses = student.getCourses();
-        if (courses.contains(course)) {
-            throw new StudentAlreadyRegisteredException(student, course);
-        }
-        courses.add(course);
-        student.setCourses(courses);
-        studentRepository.save(student);
+        Student student = studentRepository.findById(registerCourseRequest.getStudentId())
+                .orElseThrow(() -> new InvalidArgumentException(
+                        "Could not find student with id = " + registerCourseRequest.getStudentId()));
+        Course course = courseRepository.findById(registerCourseRequest.getCourseId())
+                .orElseThrow(() -> new InvalidArgumentException(
+                        "Could not find course with id = " + registerCourseRequest.getCourseId()));
+        addCourse(student, course);
     }
 
     @Override
@@ -111,6 +105,17 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public void delete(Long id) {
         studentRepository.deleteById(id);
+    }
+
+    // helper methods
+    private void addCourse(Student student, Course course) {
+        List<Course> courses = student.getCourses();
+        if (courses.contains(course)) {
+            throw new StudentAlreadyRegisteredException(student, course);
+        }
+        courses.add(course);
+        student.setCourses(courses);
+        studentRepository.save(student);
     }
 
 }

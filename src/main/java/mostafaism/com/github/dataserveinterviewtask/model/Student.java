@@ -33,7 +33,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @Pattern(regexp = "^[a-zA-Z]+$", message = "First name must consist of 1 or more alphabetic characters")
     @Column(name = "first_name")

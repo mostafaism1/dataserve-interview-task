@@ -28,7 +28,7 @@ public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @NotBlank(message = "Course name is required")
     @Column(name = "name", unique = true)

@@ -48,7 +48,7 @@
 
   - issue a POST request to the following endpoint:
     - [http://localhost:8080/students/courses/register/batch](http://localhost:8080/students/courses/register/batch)
-      with the following body:
+  - with the following body:
     - [{"studentId": 1, "courseId": 1},{"studentId": 2, "courseId": 1}]
 
 - Notes

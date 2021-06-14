@@ -2,7 +2,7 @@
 
 ## Statement
 
-- Build a course registration application, with an enpoint for **batch** registration, where each registration should spawn its own thread, and upon completion print `"SUCCESS"` to the console.
+- Build a course registration application, with an endpoint for **batch** registration, where each registration should spawn its own thread, and upon completion print `"SUCCESS"` to the console.
 
 - Use **Spring Boot** and **Hibernate**.
 

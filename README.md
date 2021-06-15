@@ -2,7 +2,7 @@
 
 ## Statement
 
-- Build a course registration application, with an endpoint for **batch** registration, where each registration should spawn its own thread, and upon completion print `"SUCCESS"` to the console.
+- Build a course registration application, with an endpoint for **batch** registration, where each registration should spawn its own thread, and upon completion of all threads print `"SUCCESS"` to the console.
 
 - Use **Spring Boot** and **Hibernate**.
 
@@ -29,7 +29,7 @@
 
   - Clone the repository
   - Run the following command from the project's directory:
-    - $./mvnw spring-boot:run
+    - `$./mvnw spring-boot:run`
 
 - Endpoints
 
@@ -49,7 +49,7 @@
   - issue a POST request to the following endpoint:
     - [http://localhost:8080/students/courses/register/batch](http://localhost:8080/students/courses/register/batch)
   - with the following body:
-    - [{"studentId": 1, "courseId": 1},{"studentId": 2, "courseId": 1}]
+    - `[{"studentId": 1, "courseId": 1},{"studentId": 2, "courseId": 1}]`
 
 - Notes
   - In addition to registering students in courses, I added a couple more endpoints for:
